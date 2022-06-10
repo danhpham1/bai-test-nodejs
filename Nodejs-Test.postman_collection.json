@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "d9718338-e45d-4451-bcf6-e5200adca8bd",
+		"name": "Nodejs-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7582057"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Trần\",\r\n    \"lastname\":\"Tí\",\r\n    \"age\":10,\r\n    \"coordinate\":\"456:789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Detail User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/read?id=961dc067-e230-48c5-83bb-cbc24f9f7df7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"read"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "961dc067-e230-48c5-83bb-cbc24f9f7df7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/search?name=tí",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "tí"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastname\": \"Danh\",\r\n    \"age\": 110\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/edit/0d5e7250-aa7f-43a3-a0ee-30df8b3bac7a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"edit",
+						"0d5e7250-aa7f-43a3-a0ee-30df8b3bac7a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/edit/961dc067-e230-48c5-83bb-cbc24f9f7df7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"edit",
+						"961dc067-e230-48c5-83bb-cbc24f9f7df7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/locate?n=2&userId=0d5e7250-aa7f-43a3-a0ee-30df8b3bac7a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"locate"
+					],
+					"query": [
+						{
+							"key": "n",
+							"value": "2"
+						},
+						{
+							"key": "userId",
+							"value": "0d5e7250-aa7f-43a3-a0ee-30df8b3bac7a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
